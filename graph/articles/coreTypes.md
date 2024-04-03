@@ -80,7 +80,7 @@ Add a navigation from user to the new type:
 </EntityType>
 ```
 
-#### Contain the new type in an entity set elsewhere, and add a navigation property to the existing type on the new type.
+#### Option 3: Contain the new type in an entity set elsewhere, and add a navigation property to the existing type on the new type.
 
 Define the new entity type, with a navigation to the user:
 ```xml
