@@ -41,7 +41,7 @@ Don't add new properties to core types such as `user`.
 
 Do one of the following:
 
-#### Add a navigation property on the existing type to the new type, containing the new type.
+#### Option 1: Add a navigation property on the existing type to the new type, containing the new type.
 
 Define the new entity type:
 ```xml
