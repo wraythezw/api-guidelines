@@ -58,7 +58,7 @@ Add a contained navigation from user to the new entity type:
 </EntityType>
 ```
 
-#### Contain the new type in an entity set elsewhere, and add a navigation property to the new type on the existing type.
+#### Option 2: Contain the new type in an entity set elsewhere, and add a navigation property to the new type on the existing type.
 
 Define the new entity type:
 ```xml
