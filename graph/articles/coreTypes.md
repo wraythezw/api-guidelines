@@ -45,7 +45,7 @@ Do one of the following:
 
 Define the new entity type:
 ```xml
-<EntityType name="bankAccountInformation">
+<EntityType name="bankAccountDetail">
     <Property Name="accountNumber" Type="Edm.string"/>
     <Property Name="routingNumber" Type="Edm.string"/>
 </EntityType>
@@ -54,7 +54,7 @@ Define the new entity type:
 Add a contained navigation from user to the new entity type:
 ```xml
 <EntityType name="user">
-    <NavigationProperty Name="bankAccountInformation" Type="bankAccountInformation" ContainsTarget="true"/>
+    <NavigationProperty Name="bankAccountDetail" Type="bankAccountDetail" ContainsTarget="true"/>
 </EntityType>
 ```
 
@@ -62,7 +62,7 @@ Add a contained navigation from user to the new entity type:
 
 Define the new entity type:
 ```xml
-<EntityType name="bankAccountInformation">
+<EntityType name="bankAccountDetail">
     <Property Name="accountNumber" Type="Edm.string"/>
     <Property Name="routingNumber" Type="Edm.string"/>
 </EntityType>
@@ -70,13 +70,13 @@ Define the new entity type:
 
 Contain the new entity type in an entity set or singleton:
 ```xml
-<EntitySet Name="bankAccountInformations" EntityType="bankAccountInformation">
+<EntitySet Name="bankAccountDetails" EntityType="bankAccountDetail">
 ```
 
 Add a navigation from user to the new type:
 ```xml
 <EntityType name="user">
-    <NavigationProperty Name="bankAccountInformation" Type="bankAccountInformation" />
+    <NavigationProperty Name="bankAccountDetail" Type="bankAccountDetail" />
 </EntityType>
 ```
 
@@ -84,7 +84,7 @@ Add a navigation from user to the new type:
 
 Define the new entity type, with a navigation to the user:
 ```xml
-<EntityType name="bankAccountInformation">
+<EntityType name="bankAccountDetail">
     <Property Name="accountNumber" Type="Edm.string"/>
     <Property Name="routingNumber" Type="Edm.string"/>
     <NavigationProperty Name="user" Type="microsoft.graph.user" />
