@@ -2,9 +2,9 @@
 
 ## Overview
 
-Types exist in Microsoft Graph which are highly-connected/central to the Microsoft Graph ecosystem. Often, these types are in the position of containing many structural properties relevant to other APIs, because they are connected to many entities in Microsoft Graph.
+Types exist in Microsoft Graph which are highly-connected/central to the Microsoft Graph ecosystem. Often, these types are in the position of being able to contain structural properties relevant to other APIs, because they are connected to many entities in Microsoft Graph.
 
-Structural properties should be only added to these core types when they are properties of the entity itself and strictly not for the purpose of convenience due to the entity's position in Microsoft Graph.
+Structural properties should be only added to these core types when they are intrinsic to the entity itself, and strictly not for the purpose of convenience due to the entity's position in Microsoft Graph.
 
 ## Core Types in Microsoft Graph
 
