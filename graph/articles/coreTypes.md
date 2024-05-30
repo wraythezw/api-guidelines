@@ -16,7 +16,7 @@ The following types are identified as core types, and will require strong justif
 
 ## Alternatives to Adding Structural Properties
 
-Instead of adding a structural property to the existing type (`user`, `group` or `device`), create a new type that models the information captured in the proposed structural property(s).
+Instead of adding a structural property to the existing core type (`user`, `group` or `device`), create a new type that models the information captured in the proposed structural property(s).
 Then, model the relationship between the existing core type and the new type by adding a navigation property. For information on modeling with navigation properties, see [Navigation Property](../patterns/navigation-property.md).
 
 ## Example:
@@ -38,7 +38,7 @@ Don't add new properties to core types such as `user`.
 
 Model the information by creating a new type and model the relationship to the existing core type with a navigation property. To determine which option is most appropriate, see [Navigation Property](../patterns/navigation-property.md):
 
-#### Option 1: Add a navigation property on the existing type to the new type, containing the new type.
+#### Option 1: Add a navigation property on the existing core type to the new type, containing the new type.
 
 Define the new entity type:
 ```xml
@@ -55,7 +55,7 @@ Add a contained navigation from user to the new entity type:
 </EntityType>
 ```
 
-#### Option 2: Contain the new type in an entity set elsewhere, and add a navigation property to the new type on the existing type.
+#### Option 2: Contain the new type in an entity set elsewhere, and add a navigation property to the new type on the existing core type.
 
 Define the new entity type:
 ```xml
@@ -77,7 +77,7 @@ Add a navigation from user to the new type:
 </EntityType>
 ```
 
-#### Option 3: Contain the new type in an entity set elsewhere, and add a navigation property to the existing type on the new type.
+#### Option 3: Contain the new type in an entity set elsewhere, and add a navigation property to the existing core type on the new type.
 
 Define the new entity type, with a navigation to the user:
 ```xml
