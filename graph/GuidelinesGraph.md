@@ -336,7 +336,7 @@ For a complete mapping of error codes to HTTP statuses, see
 ### Limitations on core types
 
 The types `user`, `group`, and `device` should not have any new structural property(s) added, without compelling justification.
-Instead, model the concept represented in those property(s) as a new entity, and do one of the following:
+Instead, model the concept represented in those property(s) as a new entity and do one of the following:
 1. Add navigation from `user`, `group`, or `device` to the new entity.
 2. Add a navigation from the new entity to `user`, `group` or `device`.
 
