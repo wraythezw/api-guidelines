@@ -130,4 +130,4 @@ With such enum, customers can select multiple values in a single field:
 
 `displayMethod = tip | alert`
 
-In cases where two properties want to use the same *conceptual* `EnumType`, but one property is a collection while the other is single-values, the model should have *two* duplicate `EnumType`s, marking one as a flags enum and making its name the plural form of the non-flags enum.
+In cases where two properties want to use the same *conceptual* `EnumType`, but one property is a collection while the other is single-values, the model should define *two* separate `EnumType`s, one being a non-flags enum with a singular name and the other marked as a flags enum with its name being the plural form of the non-flags enum.
