@@ -100,6 +100,8 @@ but it is also open for future scenarios:
 
 Additionally speaking, depending on the situation, a nullable enum can very likely be avoided by adding a `none` member.
 
+If used, `EnumType` names should be singular if the are non-flags enums, and the names should be plural if they are flags enums.
+
 #### Flag Enums or Collection of Enums
 
 In case an enum can have multiple values at the same time the tentation is to model the property as a collection of Enums:
@@ -127,3 +129,5 @@ However, [Flagged Enums](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/
 With such enum, customers can select multiple values in a single field:
 
 `displayMethod = tip | alert`
+
+In cases where two properties want to use the same *conceptual* `EnumType`, but one property is a collection while the other is single-values, the model should define *two* separate `EnumType`s, one being a non-flags enum with a singular name and the other marked as a flags enum with its name being the plural form of the non-flags enum.
