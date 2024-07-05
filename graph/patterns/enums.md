@@ -131,13 +131,3 @@ With such enum, customers can select multiple values in a single field:
 `displayMethod = tip | alert`
 
 In cases where two properties want to use the same *conceptual* `EnumType`, but one property is a collection while the other is single-values, the model should define *two* separate `EnumType`s, one being a non-flags enum with a singular name and the other marked as a flags enum with its name being the plural form of the non-flags enum.
-
-#### Flag enum + non-flag enum
-
-There are occasions where one API will want to use a non-flag enum, but another API will want a flags enum. 
-For example, the `displayMethod` example above may have one API that is configuring which display methods to use, and another API which is configuring that particular display method. 
-In this case, the first API will want a flags enum, but the second API will want to only allow configuring one display method at a time, and will therefore prefer a non-flags enum.
-
-Two enum types should be defined, one as a flags enum and the other as a non-flags enum.
-The flags enum should be named such that it is plural, and the non-flags enum should be named such that it is singular.
-The two types should be kept in sync with each other.
