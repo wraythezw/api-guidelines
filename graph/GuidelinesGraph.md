@@ -99,7 +99,9 @@ Following is a short summary of the most often used conventions.
 | :no_entry: **MUST NOT** use redundant words in names.                   | - **Right:** /places/{id}/**displayName** or /phones/{id}/**number** <BR> -  **Wrong:** /places/{id}/**placeName** or /phones/{id}/**phoneNumber** |
 | :warning: **SHOULD NOT** use brand names in type or property names.     | - **Right:** chat   <BR> -  **Wrong:** teamsChat <BR> - **NOTE:** there is an exception for resources that *only* exist under the `/admin` root segment and the `/users/{userId}/settings` path.  |
 | :warning: **SHOULD NOT** use acronyms or abbreviations unless they are broadly understood. | - **Right:** url or htmlSignature <BR> - **Wrong:** msodsUrl or dlp |
-| :heavy_check_mark: **MUST** use singular nouns for type names.          | - **Right:** address  <BR> - **Wrong:** addresses  |
+| :heavy_check_mark: **MUST** use singular nouns for non-enum type names.          | - **Right:** address  <BR> - **Wrong:** addresses  |
+| :heavy_check_mark: **MUST** use singular nouns for non-flags enum type names.          | - **Right:** color  <BR> - **Wrong:** colors  |
+| :heavy_check_mark: **MUST** use plural nouns for flags enum type names.          | - **Right:** diplayMethods  <BR> - **Wrong:** displayMethod  |
 | :heavy_check_mark: **MUST** use plural nouns for collections (for listing type or collection properties). | - **Right:** addresses <BR> - **Wrong:** address |
 | :ballot_box_with_check: **SHOULD** pluralize the noun even when followed by an adjective (a *postpositive*).| - **Right:** passersby or mothersInLaw    <BR> -  **Wrong:** notaryPublics or motherInLaws |
 | **CASING** | |
